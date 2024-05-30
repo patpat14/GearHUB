@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
+    <title>GearHUB</title>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <a href="Home.html" class="logo">Gear <span>HUB</span></a>
+        <div class="search-bar">
+            <input type="text" placeholder="Search...">
+            <button type="submit">Search</button>
+        </div>
+        <ul>
+            <li><a href="Home.html" class="active">HOME</a></li>
+            <li><a href="index.html">Basketball</a></li>
+            <li><a href="Soccer.html">Soccer</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+    </nav>
+
+    <!-- Banner -->
+    <section class="banner">
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="Sportspic4.jpg" alt="Slide 1">
+                <div class="inner-text">
+                    <h1>Gear Up and Excel in Your Sport</h1>
+                    <p>Quality Sports Attire and Accessories for Every Athlete. <br> Train Hard, Play Harder.</p>
+                    <a href="about.html">Read More <i class="fas fa-arrow-right"></i></a>    
+                </div>
+            </div>
+            <div class="mySlides fade">
+                <img src="Sportspic1.avif " alt="Slide 2">
+                <div class="inner-text">
+                    <h1>Elevate Your Game with Our Sports Gear</h1>
+                    <p>From Apparel to Accessories, We Have It All. <br> Shop Now and Perform at Your Best.</p>
+                    <a href="about.html">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="mySlides fade">
+                <img src="sportspic5.avif" alt="Slide 3">
+                <div class="inner-text">
+                    <h1>Champion's Choice for Sports Apparel</h1>
+                    <p>Top-Quality Gear for Every Sport Enthusiast. <br> Gear Up, Stay Fit, and Conquer the Field</p>
+                    <a href="about.html">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+<section>
+    <!-- Footer -->
+    <footer>
+        <p> Human Computer Interaction | <span>Gear HUB</span></p>
+    </footer>
+</section>
+
+<script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        let slides = document.getElementsByClassName("mySlides");
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+            slideIndex = 1;
+        }    
+        slides[slideIndex-1].style.display = "block";  
+        setTimeout(showSlides, 3000); // Change image every 3 seconds
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+    const scrollLink = document.querySelector('.scroll-link');
+
+    scrollLink.addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent the default anchor behavior
+        const target = document.querySelector('#section1');
+        target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start' // Align the top of the target element with the top of the scrollable ancestor
+        });
+    });
+});
+</script>
+
+</body>
+</html>
